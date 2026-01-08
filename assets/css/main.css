@@ -1958,3 +1958,206 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Certifications Section
+--------------------------------------------------------------*/
+.certifications {
+  padding: 80px 0;
+}
+
+.certifications .certification-card {
+  background: var(--surface-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.certifications .certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FF9900, #FF6600);
+}
+
+.certifications .certification-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.certifications .certification-badge {
+  background: linear-gradient(135deg, #232f3e 0%, #1a242f 100%);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications .certification-badge::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 153, 0, 0.1) 0%, transparent 50%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.certifications .certification-badge .badge-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  z-index: 1;
+  filter: drop-shadow(0 4px 20px rgba(255, 153, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.certifications .certification-card:hover .badge-img {
+  transform: scale(1.05);
+}
+
+.certifications .certification-content {
+  padding: 30px;
+}
+
+.certifications .certification-issuer {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #FF9900;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.certifications .certification-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.certifications .certification-description {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.certifications .certification-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.certifications .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.certifications .meta-item i {
+  color: var(--accent-color);
+  font-size: 16px;
+}
+
+.certifications .certification-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.certifications .btn-view-cert,
+.certifications .btn-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.certifications .btn-view-cert {
+  background: linear-gradient(135deg, #FF9900, #FF6600);
+  color: #fff;
+}
+
+.certifications .btn-view-cert:hover {
+  background: linear-gradient(135deg, #FF6600, #FF4500);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+  color: #fff;
+}
+
+.certifications .btn-verify {
+  background: transparent;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  color: var(--default-color);
+}
+
+.certifications .btn-verify:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .certifications .certification-card {
+    margin: 0 15px;
+  }
+  
+  .certifications .certification-badge {
+    padding: 30px;
+  }
+  
+  .certifications .certification-badge .badge-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .certifications .certification-content {
+    padding: 25px;
+  }
+  
+  .certifications .certification-title {
+    font-size: 18px;
+  }
+  
+  .certifications .certification-meta {
+    gap: 15px;
+  }
+  
+  .certifications .btn-view-cert,
+  .certifications .btn-verify {
+    width: 100%;
+    justify-content: center;
+  }
+}
