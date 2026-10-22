@@ -145,16 +145,16 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
-  transition: all 0.5s;
+  padding: 10px 0;
+  transition: all 0.3s;
   z-index: 997;
 }
 
 .header .header-container {
   background: var(--surface-color);
   border-radius: 50px;
-  padding: 5px 25px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 3px 20px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .header .logo {
@@ -162,25 +162,25 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 32px;
   margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   padding-left: 5px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--heading-color);
 }
 
 .header .header-social-links {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .header .header-social-links a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
+  padding-left: 10px;
   display: inline-block;
   transition: 0.3s;
   font-size: 16px;
@@ -196,13 +196,13 @@ h6 {
 
 @media (max-width: 1200px) {
   .header {
-    padding-top: 10px;
+    padding-top: 8px;
   }
 
   .header .header-container {
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px 5px 10px 15px;
+    padding: 8px 15px;
   }
 
   .header .logo {
@@ -242,10 +242,10 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 16px;
+    padding: 10px 14px;
+    font-size: 14.5px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -633,8 +633,8 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 90px;
+  padding: 38px 0;
+  scroll-margin-top: 80px;
   overflow: clip;
 }
 
@@ -643,6 +643,7 @@ section,
   section,
   .section {
     scroll-margin-top: 66px;
+    padding: 30px 0;
   }
 }
 
@@ -651,14 +652,14 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 25px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   background: linear-gradient(120deg, var(--heading-color), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -667,8 +668,8 @@ section,
 }
 
 .section-title .title-shape {
-  width: 200px;
-  height: 20px;
+  width: 160px;
+  height: 16px;
   margin: 0 auto;
   color: var(--accent-color);
   opacity: 0.5;
@@ -2305,4 +2306,338 @@ section,
   border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
   color: var(--accent-color);
   font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Compact 2-Column Resume & Credentials UI
+--------------------------------------------------------------*/
+.resume-column-card {
+  background: var(--surface-color);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  height: 100%;
+}
+
+.resume-column-card .column-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1.5px solid color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+.resume-column-card .column-header i {
+  font-size: 1.3rem;
+}
+
+.resume-column-card .column-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--heading-color);
+}
+
+.compact-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.compact-item {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.compact-item:hover {
+  border-left-color: var(--accent-color);
+}
+
+.compact-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.compact-meta .company-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--heading-color);
+}
+
+.compact-meta .role-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
+.role-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--default-color);
+  margin-bottom: 0.4rem;
+}
+
+.role-bullets {
+  padding-left: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.role-bullets li {
+  margin-bottom: 0.25rem;
+}
+
+.compact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.compact-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+  color: var(--heading-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+/* Compact AWS Cert Card */
+.cert-compact-box {
+  background: linear-gradient(to bottom right, var(--surface-color), color-mix(in srgb, var(--accent-color), transparent 97%));
+}
+
+.compact-cert-body {
+  padding: 0.2rem 0;
+}
+
+.compact-cert-badge {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(255, 153, 0, 0.25));
+}
+
+.compact-cert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ea580c;
+  display: block;
+}
+
+.cert-verified-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  display: inline-block;
+}
+
+.compact-cert-desc {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0.8rem;
+}
+
+.btn-compact-cert,
+.btn-compact-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-compact-cert {
+  background: linear-gradient(135deg, #FF9900, #FF6600);
+  color: #fff;
+}
+
+.btn-compact-cert:hover {
+  background: linear-gradient(135deg, #FF6600, #ea580c);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-compact-verify {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+  color: var(--default-color);
+}
+
+.btn-compact-verify:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+/*--------------------------------------------------------------
+# Compact Balanced Portfolio Cards UI
+--------------------------------------------------------------*/
+.compact-project-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.compact-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.compact-project-card .project-img-wrapper {
+  position: relative;
+  aspect-ratio: 16/9;
+  max-height: 210px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.compact-project-card .project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.compact-project-card:hover .project-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.compact-project-card .project-overlay-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.compact-project-card .project-overlay-links a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.compact-project-card .project-overlay-links a:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.compact-project-card .project-body {
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.compact-project-card .project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.compact-project-card .project-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 28%);
+  margin-bottom: 0.9rem;
+  flex-grow: 1;
+}
+
+.project-domain-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--accent-color);
+}
+
+.client-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+.paper-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  text-decoration: none;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.project-tech-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+  color: var(--heading-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
 }
